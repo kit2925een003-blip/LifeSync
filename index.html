@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeSync - Productivity Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>LifeSync</h1>
+        <p>Your Personal Productivity & Expense Tracker</p>
+    </header>
+
+    <main>
+
+        <!-- Dashboard -->
+
+        <section class="card">
+            <h2>Dashboard</h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-box">
+                    <h3 id="totalTasks">0</h3>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3 id="completedTasks">0</h3>
+                    <p>Completed Tasks</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3 id="completionRate">0%</h3>
+                    <p>Completion Rate</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3 id="procrastinationRate">0%</h3>
+                    <p>Procrastination Rate</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Task Manager -->
+
+        <section class="card">
+
+            <h2>Task Manager</h2>
+
+            <div class="form-group">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter task..."
+                >
+
+                <button onclick="addTask()">
+                    Add Task
+                </button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+        </section>
+
+        <!-- Screen Time Tracker -->
+
+        <section class="card">
+
+            <h2>Screen Time Tracker</h2>
+
+            <div class="screen-form">
+
+                <input
+                    type="text"
+                    id="appName"
+                    placeholder="App Name"
+                >
+
+                <input
+                    type="number"
+                    id="screenTime"
+                    placeholder="Minutes Used"
+                >
+
+                <input
+                    type="number"
+                    id="appLimit"
+                    placeholder="Limit (Minutes)"
+                >
+
+                <button onclick="addScreenTime()">
+                    Add Usage
+                </button>
+
+            </div>
+
+            <div id="screenAlert"></div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>App</th>
+                        <th>Usage</th>
+                        <th>Limit</th>
+                    </tr>
+                </thead>
+
+                <tbody id="screenTable">
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Expense Tracker -->
+
+        <section class="card">
+
+            <h2>Expense Tracker</h2>
+
+            <div class="expense-form">
+
+                <input
+                    type="text"
+                    id="expenseCategory"
+                    placeholder="Category"
+                >
+
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="Amount"
+                >
+
+                <button onclick="addExpense()">
+                    Add Expense
+                </button>
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody id="expenseTable">
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Analytics -->
+
+        <section class="card">
+
+            <h2>Analytics Report</h2>
+
+            <div class="report-container">
+
+                <div class="report-box">
+
+                    <h3>Most Completed Tasks</h3>
+
+                    <ul id="completedTaskStats">
+                    </ul>
+
+                </div>
+
+                <div class="report-box">
+
+                    <h3>Most Postponed Tasks</h3>
+
+                    <ul id="postponedTaskStats">
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Top Apps -->
+
+        <section class="card">
+
+            <h2>Top 5 Most Used Apps</h2>
+
+            <ol id="topApps">
+            </ol>
+
+        </section>
+
+        <!-- Expense Ranking -->
+
+        <section class="card">
+
+            <h2>Expense Ranking</h2>
+
+            <ol id="expenseRanking">
+            </ol>
+
+        </section>
+
+        <!-- Monthly Report -->
+
+        <section class="card">
+
+            <h2>Monthly Life Report</h2>
+
+            <div id="monthlyReport">
+
+                <p>Total Tasks: 0</p>
+                <p>Completed Tasks: 0</p>
+                <p>Completion Rate: 0%</p>
+                <p>Procrastination Rate: 0%</p>
+                <p>Total Expenses: ₹0</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            LifeSync © 2026
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+<script src="script2.js"></script>
+<script src="script3.js"></script>
+
+</body>
+</html>
